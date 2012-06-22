@@ -66,7 +66,7 @@ class DomiSolo(object):
     DEFAULT_EVENTS = [
         (u"Architecte", u"Achat d'un bâtiment : coût -1 pièce."),
         (u"Banditisme", u"Dévoilez les 2 premières cartes de votre deck. Si vous dévoilez une carte trésor, écartez là, si vous en révélez 2, écartez la plus élevée. Défaussez l'autre carte."),
-        (u"Banque", u"Vous pouvez écarter des cartes Trésor de votre main contre des cartes Trésor pour la valeur (et non le prix) de la carte (Ag-2, Or-3)"),
+        (u"Banque", u" Vous pouvez écarter autant de cartes Trésors de votre que main que vous le souhaitez, recevez ensuite les cartes Trésors de votre choix d'une valeur totale inférieure ou égale au coût des cartes écartées, ajouter ces cartes à votre main."),
         (u"Colporteur", u"+1 achat (pour +1 pièce)"),
         (u"Emeutes", u"Prenez une carte malédiction"),
         (u"Impôt Royal", u"-Phase d'achat- Vous ne pouvez dépenser que la moitié (arrondie à l'entier supérieur) de vos pièces disponibles (Trésor et Action)"),
