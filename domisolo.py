@@ -167,9 +167,11 @@ class TextUI(object):
 def main():
     ui = TextUI()
     ui.usage()
-    points, cells = ui.chooseConquest()
-    ds = DomiSolo(cells, points)
-    ds.run()
+    quest = ui.chooseConquest()
+    if quest is not None:
+        points, cells = quest
+        ds = DomiSolo(cells, points)
+        ds.run()
 
 if __name__ == "__main__":
     main()
