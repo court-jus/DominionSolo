@@ -106,9 +106,9 @@ class DomiSolo(object):
         print u"Tour", self.current_turn, u"(", self.SEASONS[self.season], u"année", self.year,u") Marqueurs : Armée", self.army,u"- Tresor",self.treasure,u"/ Objectif",self.victory_target - self.curse
         print event_name,":",event_desc
         #print "Vous pouvez effeectuer votre action et votre achat, en respectant les consignes ci-dessus. Defaussez ensuite toutes les cartes et reconstituez-vous une main de 5 cartes"
-        print u"[a: marqueur armée (Milice ou Espion)/t: marqueur trésor (Voleur ou Bureaucrate)/m: malédiction (Sorcière)/q: quitter/Entrée: fin du tour]"
         answer = None
-        while answer is None or answer in ('a','t','m'):
+        while answer is None or answer in ('a','t','m','h'):
+            print u"[a: marqueur armée (Milice ou Espion)/t: marqueur trésor (Voleur ou Bureaucrate)/m: malédiction (Sorcière)/q: quitter/Entrée: fin du tour/h: help]"
             answer = raw_input()
             if answer == "a":
                 self.army += 1
@@ -122,6 +122,8 @@ class DomiSolo(object):
                     self.treasure = 0
             elif answer == "m":
                 self.curse += 1
+            elif answer == "h":
+                print USAGE
         if answer == 'q':
             self.running = False
         self.season += 1
